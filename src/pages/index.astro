@@ -1,12 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import GameCanvas from '../components/react/GameCanvas.tsx';
-import ScoreDisplay from '../components/svelte/ScoreDisplay.svelte'; // Nome atualizado
+import GameUI from '../components/svelte/GameUI.svelte'; // Nome atualizado
 ---
 <MainLayout title="Base Astro + React + Svelte">
   <main class="relative w-screen h-screen bg-gray-900">
     <div class="absolute top-5 left-1/2 -translate-x-1/2 z-10">
-      <ScoreDisplay client:visible />
+      <GameUI client:visible />
     </div>
 
     <div class="absolute top-0 left-0 w-full h-full z-0">
