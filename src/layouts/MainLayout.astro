@@ -1,0 +1,23 @@
+---
+// src/layouts/MainLayout.astro
+import '../styles/global.css'; // Importa os estilos globais
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Jogo 3D feito com Astro, React e Svelte" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="overflow-hidden"> {/* Desabilita o scroll da página */}
+    <slot />
+  </body>
+</html>
