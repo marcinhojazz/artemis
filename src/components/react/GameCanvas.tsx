@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
-import { addScore } from '../../lib/state';
+import { addScore } from '../../lib/store';
 
 // Componente para o nosso cubo interativo
 function InteractiveCube() {
@@ -19,7 +19,7 @@ function InteractiveCube() {
   // Função chamada quando o cubo é clicado
   const handleClick = () => {
     // Chama a ação do nosso store para adicionar um ponto
-    addScore();
+    addScore(0);
   };
 
   return (
@@ -37,7 +37,7 @@ export default function GameCanvas() {
       {/* Luzes para que possamos ver o cubo */}
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
-      
+
       {/* O cubo interativo */}
       <InteractiveCube />
 

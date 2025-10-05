@@ -1,4 +1,4 @@
-import { map } from 'nanores';
+import { map } from 'nanostores';
 
 // Define a "forma" do nosso objeto de estado para ter tipagem forte
 export interface GameState {
@@ -30,8 +30,9 @@ export function addScore(points: number) {
   }
 }
 
+
 /** Reinicia o estado do jogo para os valores iniciais. */
-export function resetGame() {
+export function resetScore() {
     gameState.set({
         score: 0,
         status: 'playing',

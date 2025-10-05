@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { gameState, resetScore } from '../../lib/state';
+  import { gameState, resetScore } from '../../lib/store';
   // O prefixo `$` faz com que o componente Svelte "escute"
   // as mudanças no nosso store global. É reativo!
 </script>
